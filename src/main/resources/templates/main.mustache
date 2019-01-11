@@ -1,0 +1,71 @@
+<html>
+<body>
+<div style="width: 50%; float: left">
+   <form method="post" action="user">
+        <input type="text" name="name" placeholder="Введите имя">
+        <input type="text" name="address" placeholder="Введите адрес">
+        <input type="text" name="email" placeholder="Введите e-mail">
+        <button type="submit">Добавить</button>
+        <div><h4>Список пользователей</h4></div>
+        {{#users}}
+            <div>
+                <b>{{id}}</b>
+                <span>{{name}}</span>
+                <i>{{address}}</i>
+                <u>{{email}}</u>
+            </div>
+        {{/users}}
+    </form>
+</div>
+<div style="width: 50%; float: left">
+    <form method="post" action="message">
+        <input type="text" name="text" placeholder="Введите сообщение">
+        <input type="text" name="tag" placeholder="Введите тэг">
+        <button type="submit">Добавить</button>
+        <div><h4>Список сообщений</h4></div>
+        {{#messages}}
+            <div>
+                <b>{{id}}</b>
+                <span>{{text}}</span>
+                <i>{{tag}}</i>
+            </div>
+        {{/messages}}
+    </form>
+</div>
+<div style="width: 50%; float: left">
+    <form method="post" action="song">
+        <input type="text" name="name" placeholder="Введите наименование">
+        <input type="text" name="artist" placeholder="Введите исполнителя">
+        <input type="text" name="genre" placeholder="Введите жанр">
+        <button type="submit">Добавить</button>
+        <div><h4>Список песен</h4></div>
+        {{#songs}}
+            <div>
+                <b>{{id}}</b>
+                <span>{{name}}</span>
+                <span>{{artist}}</span>
+                <i>{{genre}}</i>
+            </div>
+        {{/songs}}
+    </form>
+</div>
+<div style="width: 50%; float: left">
+    <form method="post" action="movie">
+        <input type="text" name="name" placeholder="Введите наименование">
+        <input type="text" name="year" placeholder="Введите год выпуска">
+        <input type="text" name="genre" placeholder="Введите жанр">
+        <button type="submit">Добавить</button>
+        <div><h4>Список фильмов</h4></div>
+        {{#movies}}
+            <div>
+                <b>{{id}}</b>
+                <span>{{name}}</span>
+                <span>{{year}}</span>
+                <i>{{genre}}</i>
+            </div>
+        {{/movies}}
+    </form>
+</div>
+
+</body>
+</html>
